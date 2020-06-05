@@ -6,7 +6,7 @@ import axios from 'axios';
 import MovieList from './Movies/MovieList';
 import Movie from './Movies/Movie';
 import SavedList from './Movies/SavedList';
-import MovieCard from './Movies/MovieCard';
+
 
 const App = () => {
 	const [savedList, setSavedList] = useState([]);
@@ -26,9 +26,11 @@ const App = () => {
 		getMovies();
 	}, []);
 
-	const addToSavedList = (movie) => {
+
+  const addToSavedList = (movie) => {
 		setSavedList([...savedList, movie]);
 	};
+
 
 	return (
 		<div>
